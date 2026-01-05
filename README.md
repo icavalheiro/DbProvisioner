@@ -4,6 +4,8 @@ DbProvisioner is a lightweight .NET code-first utility designed to run as an eph
 
 It ensures your database access controls are always in sync with your environment configuration, handling the creation of new users and the cleanup of obsolete ones.
 
+**DbProvisioner is currently considered feature complete.** It fulfills its primary purpose of synchronizing database users and schemas via environment variables within a containerized environment. But we are open for PRs with added features, please check the `CONTRIBUTION.md` for more details.
+
 ## 🚀 How it Works
 
 When the container starts, it performs the following logic:
