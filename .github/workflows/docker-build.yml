@@ -22,6 +22,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Run Unit Tests
+        run: dotnet test --configuration Release
+
       - name: Login container registry
         uses: docker/login-action@v3
         with:
