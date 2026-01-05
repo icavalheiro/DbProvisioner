@@ -5,7 +5,7 @@ WORKDIR /src
 COPY ./DbProvisioner.csproj .
 RUN dotnet restore
 
-COPY ./ .
+COPY .src/ .
 
 RUN dotnet publish -c Release -o /app
 
