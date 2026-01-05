@@ -19,7 +19,7 @@ public class Config
             string key = envVar?.ToString() ?? "";
             if (key.StartsWith("DB_") && key.EndsWith("_USERNAME") && key.Length > 12)
             {
-                var db = key.TrimStart("DB_").TrimEnd("_USERNAME");
+                var db = key.Replace("DB_", "").Replace("_USERNAME", "");
                 Console.WriteLine($"🧑‍💻 Found db {db}");
                 var username = Environment.GetEnvironmentVariable($"DB_{db}_USERNAME");
                 var password = Environment.GetEnvironmentVariable($"DB_{db}_PASSWORD");
