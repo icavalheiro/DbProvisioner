@@ -41,7 +41,7 @@ services:
 
   # The Provisioner Service
   db-provisioner:
-    build: .
+    image: ghcr.io/icavalheiro/dbprovisioner:latest
     depends_on:
       db:
         condition: service_healthy
